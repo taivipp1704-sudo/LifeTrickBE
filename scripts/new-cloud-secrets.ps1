@@ -1,12 +1,21 @@
 [CmdletBinding()]
 param(
-  [string]$OutputPath = (Join-Path $PSScriptRoot "../env/.env.cloud.local")
+  [string]$OutputPath
 )
 
 $ErrorActionPreference = "Stop"
+if (-not $OutputPath) {
+  $OutputPath = Join-Path $PSScriptRoot "../env/.env.cloud.local"
+}
 
 function New-UrlSafeSecret([int]$Bytes = 36) {
-  $buffer = [System.Security.Cryptography.RandomNumberGenerator]::GetBytes($Bytes)
+  $buffer = New-Object byte[] $Bytes
+  $generator = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+  try {
+    $generator.GetBytes($buffer)
+  } finally {
+    $generator.Dispose()
+  }
   return [Convert]::ToBase64String($buffer).TrimEnd('=').Replace('+', '-').Replace('/', '_')
 }
 
