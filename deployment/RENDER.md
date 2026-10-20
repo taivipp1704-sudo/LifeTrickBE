@@ -17,6 +17,8 @@ Khai báo các biến server trong Render, không commit giá trị thật:
 | COOKIE_SECURE | true |
 | NODE_ENV | production |
 
+Chạy `powershell -ExecutionPolicy Bypass -File scripts/new-cloud-secrets.ps1` một lần để tạo `env/.env.cloud.local` đã được Git bỏ qua. File này giữ credential cloud trên máy; không đưa nội dung vào commit, issue hoặc chat.
+
 Chọn healthcheck `/healthz`. Launcher chạy Java ở loopback 8088 và Node ở PORT do Render cấp, có giới hạn heap để thử trên gói nhỏ. Chưa kiểm chứng mức dùng RAM dưới tải Render.
 
 Với Azure SQL Free, chọn hành vi **Auto-pause the database until next month** khi hết hạn mức. Tạo hai contained user bằng `database/scripts/azure-create-users.sql`: `tk_migrator_v2` có `db_owner` để Flyway chạy migration; `tk_runtime_v2` chỉ có quyền đọc/ghi và bị chặn DDL. JDBC URL phải có `databaseName`, `encrypt=true`, `trustServerCertificate=false` và `hostNameInCertificate=*.database.windows.net`.
