@@ -2,7 +2,7 @@
 
 Backend vẫn dùng SQL Server. Chưa tạo dịch vụ Render vì chưa có SQL Server trên cloud; bản Vercel dùng chế độ xem thử giao diện.
 
-Khi đã có SQL Server cloud, tạo Web Service từ repository LifeTrickBE, branch main, Dockerfile `deployment/Dockerfile.render`, build context `.`. Chọn Free nếu chỉ thử ngắn hạn; không tạo disk hoặc database trả phí.
+Khi đã có SQL Server cloud, tạo Blueprint từ `render.yaml` hoặc Web Service từ repository LifeTrickBE, branch main, Dockerfile `deployment/Dockerfile.render`, build context `.`. Blueprint cố định gói Free, health check và các biến công khai; các biến bí mật vẫn phải nhập trong Render.
 
 Khai báo các biến server trong Render, không commit giá trị thật:
 
@@ -18,6 +18,10 @@ Khai báo các biến server trong Render, không commit giá trị thật:
 | NODE_ENV | production |
 
 Chọn healthcheck `/healthz`. Launcher chạy Java ở loopback 8088 và Node ở PORT do Render cấp, có giới hạn heap để thử trên gói nhỏ. Chưa kiểm chứng mức dùng RAM dưới tải Render.
+
+Với Azure SQL Free, chọn hành vi **Auto-pause the database until next month** khi hết hạn mức. Tạo hai contained user bằng `database/scripts/azure-create-users.sql`: `tk_migrator_v2` có `db_owner` để Flyway chạy migration; `tk_runtime_v2` chỉ có quyền đọc/ghi và bị chặn DDL. JDBC URL phải có `databaseName`, `encrypt=true`, `trustServerCertificate=false` và `hostNameInCertificate=*.database.windows.net`.
+
+Kết nối database cloud được giới hạn còn tối đa 3 connection và 0 connection nhàn rỗi trên Render để Azure SQL serverless có thể tự tạm dừng khi không dùng.
 
 Filesystem của Render Free là tạm: ảnh/video sẽ mất sau restart/redeploy. Không dùng bản này để giữ dữ liệu quan trọng, chưa bật lưu video bền vững trên cloud. Tài khoản/bài/sổ tay chỉ bền vững nếu SQL Server ngoài Render được cấu hình đúng. Không đưa SQL Server trên máy cá nhân ra Internet để nối tạm.
 

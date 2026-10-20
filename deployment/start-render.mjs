@@ -7,7 +7,23 @@ for(const key of ['DB_URL','DB_USER','DB_PASSWORD','DB_MIGRATION_USER','DB_MIGRA
   if(!process.env[key])throw new Error('Missing required server configuration: '+key);
 }
 if(!process.env.DB_URL.startsWith('jdbc:sqlserver://'))throw new Error('This service requires SQL Server');
-const env={...process.env,API_BIND:'127.0.0.1',API_PORT:'8088',API_ORIGIN:'http://127.0.0.1:8088',GATEWAY_HOST:'0.0.0.0',GATEWAY_PORT:process.env.PORT||'10000',COOKIE_SECURE:'true',MEDIA_ROOT:process.env.MEDIA_ROOT||'/tmp/life-trick-media',FFMPEG_PATH:'/usr/bin/ffmpeg',FFPROBE_PATH:'/usr/bin/ffprobe'};
+const env={
+  ...process.env,
+  API_BIND:'127.0.0.1',
+  API_PORT:'8088',
+  API_ORIGIN:'http://127.0.0.1:8088',
+  GATEWAY_HOST:'0.0.0.0',
+  GATEWAY_PORT:process.env.PORT||'10000',
+  COOKIE_SECURE:'true',
+  MEDIA_ROOT:process.env.MEDIA_ROOT||'/tmp/life-trick-media',
+  FFMPEG_PATH:'/usr/bin/ffmpeg',
+  FFPROBE_PATH:'/usr/bin/ffprobe',
+  DB_POOL_MAX_SIZE:process.env.DB_POOL_MAX_SIZE||'3',
+  DB_POOL_MIN_IDLE:process.env.DB_POOL_MIN_IDLE||'0',
+  DB_CONNECTION_TIMEOUT_MS:process.env.DB_CONNECTION_TIMEOUT_MS||'60000',
+  DB_IDLE_TIMEOUT_MS:process.env.DB_IDLE_TIMEOUT_MS||'60000',
+  DB_MAX_LIFETIME_MS:process.env.DB_MAX_LIFETIME_MS||'300000',
+};
 let stopping=false;
 const children=[];
 function stop(code=0){if(stopping)return;stopping=true;for(const child of children)child.kill('SIGTERM');setTimeout(()=>{for(const child of children)child.kill('SIGKILL');process.exit(code);},8000).unref();}

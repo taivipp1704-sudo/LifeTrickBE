@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: life-trick-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./deployment/Dockerfile.render
+    dockerContext: .
+    healthCheckPath: /healthz
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: APP_ORIGINS
+        value: https://life-trick-fe.vercel.app
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: MEDIA_ROOT
+        value: /tmp/life-trick-media
+      - key: SEED_CONTENT
+        value: "true"
+      - key: GATEWAY_SECRET
+        generateValue: true
+      - key: DB_URL
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_MIGRATION_USER
+        sync: false
+      - key: DB_MIGRATION_PASSWORD
+        sync: false
+      - key: BOOTSTRAP_ADMIN_EMAIL
+        sync: false
+      - key: BOOTSTRAP_ADMIN_PASSWORD
+        sync: false
