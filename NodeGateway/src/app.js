@@ -128,10 +128,10 @@ export function createApp() {
   );
   app.get("/{*path}", (req, res, next) => {
     if (req.path.startsWith("/api/")) return next();
-    if (!existsSync(build + "/index.html"))
-      return res
-        .status(503)
-        .send("Chạy npm run build trong FE trước khi mở ứng dụng.");
+    if (!existsSync(build + "/index.html")) {
+      if(req.path === "/")return res.json({service:"LifeTrick API",health:"/healthz",frontendRepository:"https://github.com/taivipp1704-sudo/LifeTrickFE"});
+      return next();
+    }
     res.setHeader("Cache-Control", "no-store");
     res.sendFile(build + "/index.html");
   });

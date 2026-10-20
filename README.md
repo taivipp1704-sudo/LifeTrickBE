@@ -25,7 +25,7 @@ mvn -f BE/pom.xml verify
 
 Từ terminal tại BE/ chạy `java -jar target/tui-khon-api-2.0.0.jar`. Ở terminal khác tại repository root chạy `npm start`. API bind loopback 8088, gateway 3000. Cho FE Vite chuyển /api đến gateway và khai báo origin FE chính xác trong APP_ORIGINS.
 
-Setup tạo env/.env.local riêng với secret ngẫu nhiên, không tự đổi mật khẩu đã có. Admin ban đầu dùng email/mật khẩu từ file riêng đó. Đổi mật khẩu qua giao diện không cập nhật giá trị bootstrap.
+Nếu đã thiết lập SQL Server ở bản nguồn tui-khon, hãy dùng lại cấu hình riêng của bạn cho env/.env.local; không chạy setup để tạo lại các login cùng tên. Setup dành cho lần cài mới, tạo env/.env.local với secret ngẫu nhiên và không tự đổi mật khẩu đã có. Admin ban đầu dùng email/mật khẩu từ file riêng đó. Đổi mật khẩu qua giao diện không cập nhật giá trị bootstrap.
 
 ## Chuẩn bị Render
 
