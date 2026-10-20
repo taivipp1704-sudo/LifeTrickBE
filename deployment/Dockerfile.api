@@ -1,0 +1,15 @@
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /build
+COPY BE/pom.xml .
+RUN mvn -q dependency:go-offline
+COPY BE/src src
+COPY database/migrations /database/migrations
+COPY database/seed /database/seed
+RUN mvn -q -DskipTests package
+FROM eclipse-temurin:21-jre-jammy
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg curl && rm -rf /var/lib/apt/lists/* && groupadd -g 10001 app && useradd -u 10001 -g app app && mkdir -p /data/media && chown app:app /data/media
+WORKDIR /app
+COPY --from=build /build/target/tui-khon-api-2.0.0.jar app.jar
+USER 10001:10001
+EXPOSE 8088
+ENTRYPOINT ["java","-XX:MaxRAMPercentage=65","-Djava.awt.headless=true","-jar","app.jar"]

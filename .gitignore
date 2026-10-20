@@ -1,0 +1,15 @@
+**/node_modules/
+**/target/
+**/build/
+.env*
+**/.env*
+!env/.env.example
+!env/.env.production.example
+storage/
+artifacts/
+tools/
+database/backups/*
+!database/backups/.gitkeep
+.vercel/
+*.log
+*.pid

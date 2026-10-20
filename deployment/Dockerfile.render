@@ -1,0 +1,29 @@
+FROM maven:3.9-eclipse-temurin-21 AS api-build
+WORKDIR /build
+COPY BE/pom.xml ./pom.xml
+RUN mvn -q dependency:go-offline
+COPY BE/src ./src
+COPY database/migrations /database/migrations
+COPY database/seed /database/seed
+RUN mvn -q -DskipTests package
+
+FROM node:24-bookworm-slim AS gateway-build
+WORKDIR /gateway
+COPY NodeGateway/package*.json ./
+RUN npm ci --omit=dev
+
+FROM eclipse-temurin:21-jre-jammy AS java-runtime
+FROM node:24-bookworm-slim
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg curl libfreetype6 fontconfig && rm -rf /var/lib/apt/lists/*
+COPY --from=java-runtime /opt/java/openjdk /opt/java/openjdk
+ENV JAVA_HOME=/opt/java/openjdk
+ENV PATH=/opt/java/openjdk/bin:$PATH
+ENV NODE_ENV=production
+WORKDIR /app
+COPY --from=api-build /build/target/tui-khon-api-2.0.0.jar /app/BE/app.jar
+COPY --from=gateway-build /gateway/node_modules /app/NodeGateway/node_modules
+COPY NodeGateway/src /app/NodeGateway/src
+COPY deployment/start-render.mjs /app/deployment/start-render.mjs
+USER node
+EXPOSE 10000
+CMD ["node","deployment/start-render.mjs"]

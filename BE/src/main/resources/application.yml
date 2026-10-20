@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: tui-khon-api
+  config:
+    import: optional:file:../env/.env.local[.properties],optional:file:env/.env.local[.properties]
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
+  flyway:
+    user: ${DB_MIGRATION_USER}
+    password: ${DB_MIGRATION_PASSWORD}
+    clean-disabled: true
+    locations: classpath:db/migration
+  session:
+    store-type: jdbc
+    timeout: 30m
+    jdbc:
+      initialize-schema: never
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 31MB
+server:
+  address: ${API_BIND:127.0.0.1}
+  port: ${API_PORT:8088}
+  forward-headers-strategy: none
+  error:
+    include-message: never
+    include-stacktrace: never
+  servlet:
+    session:
+      cookie:
+        name: TKSESSION
+        http-only: true
+        secure: ${COOKIE_SECURE:true}
+        same-site: lax
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+app:
+  origins: ${APP_ORIGINS:http://localhost:3000,http://127.0.0.1:3000}
+  media-root: ${MEDIA_ROOT:../storage/media}
+  ffmpeg: ${FFMPEG_PATH:ffmpeg}
+  ffprobe: ${FFPROBE_PATH:ffprobe}
+  bootstrap-email: ${BOOTSTRAP_ADMIN_EMAIL:}
+  bootstrap-password: ${BOOTSTRAP_ADMIN_PASSWORD:}
+  seed: ${SEED_CONTENT:true}
+logging:
+  level:
+    root: INFO
+    org.springframework.security: WARN

@@ -1,0 +1,1 @@
+{"name":"life-trick-be","private":true,"version":"2.0.0","scripts":{"start":"node NodeGateway/src/server.js","build:be":"mvn -f BE/pom.xml verify","test:api":"node tests/api-integration.mjs","check":"node --check NodeGateway/src/app.js && node --check NodeGateway/src/services/apiProxy.js && node --check deployment/start-render.mjs"}}

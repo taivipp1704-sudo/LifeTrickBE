@@ -1,0 +1,317 @@
+[
+  {
+    "id": "water",
+    "content": {
+      "title": "Lọc cặn nước bằng chai nhựa",
+      "category": "survival",
+      "description": "Hiểu cấu tạo từng tầng lọc — và vì sao nước trong chưa chắc uống được.",
+      "tools": [
+        "Chai nhựa",
+        "Vải sạch",
+        "Than củi",
+        "Cát và sỏi"
+      ],
+      "steps": [
+        {
+          "title": "Tạo phễu và lớp lót",
+          "body": "Cắt đáy chai cẩn thận. Lật cổ chai xuống, lót vải sạch và một lớp than củi đã rửa bụi."
+        },
+        {
+          "title": "Xếp cát rồi sỏi",
+          "body": "Đặt cát sạch lên trên lớp than, thêm sỏi nhỏ ở trên cùng. Các lớp này chỉ giúp giữ lại một phần cặn."
+        },
+        {
+          "title": "Lọc chậm và xử lý vi sinh",
+          "body": "Hứng nước qua phễu. Theo CDC, đun nước sôi mạnh 1 phút; trên khoảng 2.000 m, đun 3 phút. Để nguội trong bình sạch có nắp."
+        }
+      ],
+      "warning": "Không uống trực tiếp nước qua bộ lọc tự chế. Lọc và đun sôi không loại bỏ nhiên liệu, hóa chất độc hoặc kim loại nặng. Nghi nhiễm hóa chất: tìm nguồn nước khác.",
+      "sourceTitle": "CDC · Làm nước an toàn trong tình huống khẩn cấp",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/",
+      "model": "water",
+      "image": "forest"
+    }
+  },
+  {
+    "id": "fire",
+    "content": {
+      "title": "Xếp củi cho lửa dễ bắt",
+      "category": "survival",
+      "description": "Một cấu trúc thoáng khí, bắt đầu từ bùi nhùi khô.",
+      "tools": [
+        "Bùi nhùi khô",
+        "Củi nhỏ",
+        "Bật lửa"
+      ],
+      "steps": [
+        {
+          "title": "Chọn chỗ được phép đốt",
+          "body": "Chỉ đốt tại khu vực được cho phép, xa lá khô và cành thấp. Chuẩn bị nước để dập lửa."
+        },
+        {
+          "title": "Tạo cấu trúc thoáng khí",
+          "body": "Đặt bùi nhùi ở tâm, chụm cành nhỏ thành hình nón. Chừa một khe để đưa lửa vào và không khí đi qua."
+        },
+        {
+          "title": "Châm lửa và trông coi",
+          "body": "Châm bùi nhùi từ phía dưới, thêm củi nhỏ dần. Dập bằng nước, đảo tro và kiểm tra nguội hoàn toàn trước khi rời đi."
+        }
+      ],
+      "warning": "Không đốt lửa khi có lệnh cấm, gió mạnh hoặc nguy cơ cháy rừng. Không dùng xăng và không đốt trong lều.",
+      "sourceTitle": "National Park Service · Campfire safety",
+      "sourceUrl": "https://www.nps.gov/articles/campfires.htm",
+      "model": "fire",
+      "image": "camp"
+    }
+  },
+  {
+    "id": "watch",
+    "content": {
+      "title": "Hiểu hướng bằng đồng hồ kim",
+      "category": "survival",
+      "description": "Mô phỏng nguyên lý phương hướng; luôn ưu tiên bản đồ và la bàn.",
+      "tools": [
+        "Đồng hồ kim"
+      ],
+      "steps": [
+        {
+          "title": "Đặt mặt đồng hồ nằm ngang",
+          "body": "Mô phỏng dưới đây dùng giả định Bắc bán cầu, giờ mặt trời và vị trí ngoài vùng nhiệt đới."
+        },
+        {
+          "title": "Hướng kim giờ về mặt trời",
+          "body": "Hướng kim ngắn về phía mặt trời. Dùng vạch 12 giờ làm mốc tham chiếu trong mô phỏng."
+        },
+        {
+          "title": "Quan sát đường phân giác",
+          "body": "Trong điều kiện phù hợp, đường chia đôi góc cho hướng Nam gần đúng. Hãy đối chiếu bằng la bàn hoặc bản đồ."
+        }
+      ],
+      "warning": "Có thể sai lớn ở Việt Nam do vị trí nhiệt đới, mùa và giờ địa phương. Không dùng phương pháp này làm căn cứ duy nhất để tìm đường.",
+      "sourceTitle": "Mô phỏng giáo dục · Không dùng để dẫn đường",
+      "sourceUrl": "https://www.nps.gov/articles/10essentials.htm",
+      "model": "watch",
+      "image": "mountain"
+    }
+  },
+  {
+    "id": "jar",
+    "content": {
+      "title": "Mở nắp lọ bị kẹt nhẹ nhàng",
+      "category": "kitchen",
+      "description": "Tăng độ bám, giảm lực lên cổ tay với đồ sẵn trong bếp.",
+      "tools": [
+        "Dây thun",
+        "Khăn sạch"
+      ],
+      "steps": [
+        {
+          "title": "Lau khô nắp và tay",
+          "body": "Đặt lọ trên mặt phẳng chắc chắn. Kiểm tra lọ không nứt, vỡ hoặc có dấu hiệu hư hỏng."
+        },
+        {
+          "title": "Quấn dây thun quanh nắp",
+          "body": "Dây thun bản rộng tăng độ bám. Giữ thân lọ bằng khăn khô để lọ không trượt."
+        },
+        {
+          "title": "Xoay từ từ để mở",
+          "body": "Xoay ngược chiều kim đồng hồ với lực vừa phải. Nếu chưa mở được, thử làm ấm riêng nắp bằng nước ấm rồi lau khô."
+        }
+      ],
+      "warning": "Không dùng dao hoặc bẩy mạnh mép thủy tinh. Tránh sốc nhiệt, không cố mở lọ nứt.",
+      "sourceTitle": "Mẹo sinh hoạt · Thực hiện nhẹ tay",
+      "sourceUrl": "https://www.nps.gov/articles/10essentials.htm",
+      "model": "jar",
+      "image": "kitchen"
+    }
+  },
+  {
+    "id": "chill",
+    "content": {
+      "title": "Làm mát đồ uống nhanh hơn",
+      "category": "kitchen",
+      "description": "Đá, nước và một chút muối giúp làm lạnh đều quanh chai.",
+      "tools": [
+        "Chai nước",
+        "Đá lạnh",
+        "Muối",
+        "Bát"
+      ],
+      "steps": [
+        {
+          "title": "Cho đá và nước vào bát",
+          "body": "Chọn bát đủ lớn để nước đá tiếp xúc quanh thân chai kín. Chừa khoảng trống để nước không tràn."
+        },
+        {
+          "title": "Thêm một ít muối",
+          "body": "Khuấy nhẹ nước đá với muối. Không để nước muối lọt vào đồ uống; không dùng chai nứt hoặc không kín."
+        },
+        {
+          "title": "Kiểm tra sau vài phút",
+          "body": "Xoay chai nhẹ để làm lạnh đều. Thời gian tùy nhiệt độ ban đầu, kích thước chai và lượng đá. Lau sạch trước khi mở."
+        }
+      ],
+      "warning": "Không hứa hẹn nhiệt độ hoặc thời gian cố định. Không để chai thủy tinh hoặc lon kín bị quên trong ngăn đá.",
+      "sourceTitle": "Nguyên lý truyền nhiệt · Mẹo sinh hoạt",
+      "sourceUrl": "https://www.nps.gov/articles/10essentials.htm",
+      "model": "bottle",
+      "image": "bottle"
+    }
+  },
+  {
+    "id": "cable",
+    "content": {
+      "title": "Cuộn dây sạc bền và gọn",
+      "category": "tech",
+      "description": "Bớt một điểm gập, thêm một chút tuổi thọ cho sợi cáp.",
+      "tools": [
+        "Dây sạc",
+        "Dây đai"
+      ],
+      "steps": [
+        {
+          "title": "Giữ thẳng cổ đầu cắm",
+          "body": "Rút nguồn trước khi cuộn. Cầm vào phần đầu cắm, tránh giật kéo dây hoặc gập sát cổ cáp."
+        },
+        {
+          "title": "Cuộn vòng theo chiều tự nhiên",
+          "body": "Tạo vòng đủ rộng theo độ mềm của cáp. Không siết hoặc vặn ngược chiều xoắn tự nhiên."
+        },
+        {
+          "title": "Cố định nhẹ bằng dây đai",
+          "body": "Dùng dây dán hoặc đai mềm. Cất ở nơi khô thoáng, không chèn vật nặng lên dây."
+        }
+      ],
+      "warning": "Ngừng dùng dây bị hở lõi, cháy, nóng bất thường hoặc đầu cắm hỏng. Cuộn đúng không sửa được cáp đã hư.",
+      "sourceTitle": "Mẹo bảo quản thiết bị",
+      "sourceUrl": "https://www.nps.gov/articles/10essentials.htm",
+      "model": "cable",
+      "image": "desk"
+    }
+  },
+  {
+    "id": "shelter",
+    "content": {
+      "title": "Chọn chỗ trú trước khi tối",
+      "category": "travel",
+      "description": "Khô ráo, tránh gió và dễ được nhìn thấy.",
+      "tools": [
+        "Tấm bạt",
+        "Dây thừng"
+      ],
+      "steps": [
+        {
+          "title": "Quan sát địa hình",
+          "body": "Tránh lòng suối, vùng có nguy cơ lũ, cây khô và nơi có đá rơi. Chọn chỗ an toàn còn đủ ánh sáng."
+        },
+        {
+          "title": "Căng bạt thấp và chắc",
+          "body": "Dùng dây giữ bạt nghiêng để thoát nước. Buộc chắc nhưng không làm hại thân cây."
+        },
+        {
+          "title": "Cách ẩm và giữ ấm",
+          "body": "Dùng tấm lót để tránh tiếp xúc trực tiếp với đất ẩm. Giữ đồ khô, để tín hiệu dễ quan sát ở nơi an toàn."
+        }
+      ],
+      "warning": "Không trú dưới cây đơn độc khi có dông. Không đốt lửa hay dùng bếp trong lều kín.",
+      "sourceTitle": "National Park Service · Ten essentials",
+      "sourceUrl": "https://www.nps.gov/articles/10essentials.htm",
+      "model": "shelter",
+      "image": "camp"
+    }
+  },
+  {
+    "id": "snake",
+    "content": {
+      "title": "Sơ cứu khi nghi rắn cắn",
+      "category": "firstaid",
+      "description": "Hạn chế cử động và tìm hỗ trợ y tế càng sớm càng tốt.",
+      "tools": [
+        "Nẹp",
+        "Vải sạch"
+      ],
+      "steps": [
+        {
+          "title": "Rời nguy hiểm, giữ bình tĩnh",
+          "body": "Đưa nạn nhân ra khỏi tầm con rắn nếu an toàn. Không cố bắt hoặc giết rắn. Tìm hỗ trợ y tế ngay."
+        },
+        {
+          "title": "Bất động và tháo trang sức",
+          "body": "Hạn chế mọi cử động. Tháo nhẫn, vòng, đồng hồ trước khi sưng. Dùng nẹp giữ chi yên, không siết chặt."
+        },
+        {
+          "title": "Tổ chức vận chuyển y tế",
+          "body": "Đưa đến cơ sở y tế sớm nhất, ưu tiên cáng hoặc phương tiện để người bị cắn không phải đi bộ. Theo dõi ý thức và nhịp thở."
+        }
+      ],
+      "warning": "Không garô, rạch, hút nọc hoặc đắp lá. Không tự áp dụng băng ép khi chưa có hướng dẫn phù hợp với loại rắn.",
+      "sourceTitle": "WHO · Snakebite",
+      "sourceUrl": "https://www.who.int/health-topics/snakebite/snakebite",
+      "model": "medical",
+      "image": "forest"
+    }
+  },
+  {
+    "id": "pack",
+    "content": {
+      "title": "Soạn túi cho chuyến đi ngắn",
+      "category": "travel",
+      "description": "Mang đủ những thứ thiết yếu, để đúng chỗ khi cần.",
+      "tools": [
+        "Ba lô",
+        "Túi kín"
+      ],
+      "steps": [
+        {
+          "title": "Lập danh sách thiết yếu",
+          "body": "Bản đồ, nguồn sáng, nước, đồ ăn, áo giữ ấm, đồ mưa, sơ cứu và phương tiện liên lạc. Điều chỉnh theo chuyến đi."
+        },
+        {
+          "title": "Chia đồ theo nhu cầu",
+          "body": "Đồ nặng gần lưng. Đồ khẩn cấp, nước và áo mưa ở vị trí dễ lấy. Đồ điện tử trong túi chống ẩm."
+        },
+        {
+          "title": "Kiểm tra trước lúc đi",
+          "body": "Sạc thiết bị, tải bản đồ và cẩm nang. Báo lịch trình cùng giờ trở về dự kiến cho người tin cậy."
+        }
+      ],
+      "warning": "Không để việc nhẹ hành lý làm thiếu nước, thuốc cá nhân hoặc đồ bảo hộ cần thiết.",
+      "sourceTitle": "National Park Service · Ten essentials",
+      "sourceUrl": "https://www.nps.gov/articles/10essentials.htm",
+      "model": "shelter",
+      "image": "mountain"
+    }
+  },
+  {
+    "id": "reuse",
+    "content": {
+      "title": "Tái dùng chai làm chậu nhỏ",
+      "category": "diy",
+      "description": "Một góc xanh nhỏ từ chiếc chai đã qua sử dụng.",
+      "tools": [
+        "Chai nhựa",
+        "Kéo",
+        "Đất trồng"
+      ],
+      "steps": [
+        {
+          "title": "Rửa sạch chiếc chai",
+          "body": "Chọn chai đựng thực phẩm đã sạch. Đánh dấu đường cắt trước khi thao tác."
+        },
+        {
+          "title": "Tạo chậu có thoát nước",
+          "body": "Cắt theo vạch, làm nhẵn mép. Tạo lỗ thoát ở đáy bằng dụng cụ phù hợp trên bề mặt chắc chắn."
+        },
+        {
+          "title": "Thêm đất và cây nhỏ",
+          "body": "Cho đất thoát nước tốt, đặt cây và tưới nhẹ. Đặt khay hứng bên dưới."
+        }
+      ],
+      "warning": "Cẩn thận với mép nhựa sắc và dụng cụ cắt. Trẻ nhỏ cần người lớn hỗ trợ.",
+      "sourceTitle": "Mẹo tái sử dụng tại nhà",
+      "sourceUrl": "https://www.nps.gov/articles/10essentials.htm",
+      "model": "bottle",
+      "image": "kitchen"
+    }
+  }
+]
